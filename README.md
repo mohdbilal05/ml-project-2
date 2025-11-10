@@ -1,102 +1,111 @@
-# 🤖 ML Project 2 – Predictive Modeling & Inference
-
-![Repo Size](https://img.shields.io/github/repo-size/mohdbilal05/ml-project-2)
-![Languages](https://img.shields.io/github/languages/count/mohdbilal05/ml-project-2)
-![Last Commit](https://img.shields.io/github/last-commit/mohdbilal05/ml-project-2)
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-
-This repository implements an ML model — from **training** to **prediction service** — with clear modular separation. It demonstrates how to build a machine learning system with **data pipelines**, **model inference**, and **helper utilities**.
+# 📉 Credit Risk Modelling Using Classification  
+### A Machine Learning project by [Mohd Bilal](https://www.linkedin.com/in/bilal-mohd)  
 
 ---
 
-## ✨ Highlights & Features
-
-- Modular design separating training logic and prediction logic  
-- Clean interface for making predictions via `prediction_helper.py`  
-- Uses artifact management (models, scaler, encoders)  
-- Structured dataset and notebook folder layout  
-- Easily extensible for adding more models or features  
+## 🚀 Project Overview  
+In financial services, assessing credit risk accurately is fundamental to profitability and stability.  
+In this project, I developed a **classification model** to predict credit default risk—leveraging demographic, financial, and behavioural data to identify high-risk borrowers.  
+The workflow covers the full machine-learning lifecycle: data exploration → feature engineering → model building & tuning → evaluation & business-oriented insights.
 
 ---
 
-## 🔧 Tech Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Python     | Core language |
-| Pandas     | Data manipulation |
-| NumPy      | Numeric operations |
-| Scikit-learn | Modeling & preprocessing |
-| Jupyter / Notebooks | Exploration & prototyping |
-| Logging / OS | File & artifact handling |
-| Pickle / Joblib | Serialization of models and transformers |
+## 🧩 What This Project Demonstrates  
+✅ End-to-end ML pipeline for classification  
+✅ Data wrangling, cleaning & feature engineering  
+✅ Handling class imbalance and model interpretability  
+✅ Model comparison using classification metrics (accuracy, precision, recall, AUC)  
+✅ Practical business insights for credit risk management  
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Structure  
 
-<img width="527" height="258" alt="image" src="https://github.com/user-attachments/assets/626c07a2-d449-4597-80a2-3b034fc3bd16" />
 
+<img width="817" height="420" alt="image" src="https://github.com/user-attachments/assets/744a65c3-e5f8-413b-9215-ac8c28b7a7b9" />
 
 
 ---
 
-## 🛠️ How to Use / Run
+## 🧠 Technical Workflow  
 
-### 1. Clone & Setup Environment
+### 1️⃣ Data Exploration  
+- Loaded and examined dataset features (income, debt-to-income, credit history, etc.).  
+- Visualised distributions and relationships; identified missing values and class imbalance issues (e.g., default vs non-default).  
 
-```bash
-git clone https://github.com/mohdbilal05/ml-project-2.git
-cd ml-project-2
+### 2️⃣ Data Preparation  
+- Handled missing/erroneous data.  
+- Encoded categorical variables and scaled numeric ones.  
+- Addressed class imbalance via oversampling/undersampling or SMOTE.  
+- Split data into training and testing subsets.  
 
-python -m venv venv
-source venv/bin/activate    # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+### 3️⃣ Model Building  
+Implemented and compared classification algorithms:
+- Logistic Regression  
+- Decision Tree Classifier  
+- Random Forest Classifier  
+- Gradient Boosting Classifier  
 
-**2. Run Training Pipeline**
-python main.py
+### 4️⃣ Model Evaluation  
+Compared models using classification metrics:
+- Accuracy  
+- Precision & Recall  
+- F1-Score  
+- ROC-AUC  
+Choose the optimal model balancing predictive performance and business risk (false negatives matter).  
 
-This will:
-1. Load dataset(s) from datasets/
-2. Preprocess and transform data
-3. Train the model
-4. Save the model and preprocessing artifacts to artifacts/
+### 5️⃣ Insights & Interpretability  
+- Identified top risk drivers: e.g., credit history length, debt ratio, late payments.  
+- Created interpretable visuals (feature importance, confusion matrix) to support decision-making.  
+- Highlighted how the model can support credit policy adjustments and risk mitigation.  
 
-**3. Make Predictions (Inference)**
-from prediction_helper import predict_from_input
+---
 
-# Example usage:
-input_data = {
-    # key: feature name, value: feature value
-    "feature1": 5.0,
-    "feature2": "CategoryA",
-    ...
-}
-prediction = predict_from_input(input_data)
-print("Prediction:", prediction)
+## 💡 Key Achievements  
+- Delivered a robust credit-risk classification pipeline replicating real-world banking scenarios.  
+- Showcased ability to manage imbalanced datasets and interpret model results in a business context.  
+- Built clean, clearly segmented Jupyter notebooks for each stage of analysis.  
+- Positioned the work for practical adoption in credit risk departments.  
 
-🔄 Workflow & Data Flow
+---
 
-| Step                | What Happens                                                |
-| ------------------- | ----------------------------------------------------------- |
-| **Data Ingestion**  | Load raw data from `datasets/`                              |
-| **Preprocessing**   | Clean, encode categorical, scale numeric                    |
-| **Model Training**  | Fit the ML model                                            |
-| **Evaluation**      | Compute metrics on validation / test split                  |
-| **Artifact Saving** | Persist the trained model, scalers, encoders                |
-| **Prediction**      | Load artifacts and use `prediction_helper.py` for inference |
+## 🔬 Tech Stack  
+| Category       | Tools         |
+|----------------|---------------|
+| Programming    | Python 3      |
+| Libraries      | pandas, numpy, scikit-learn, imbalanced-learn, matplotlib, seaborn |
+| Modeling       | Logistic Regression, Decision Tree, Random Forest, Gradient Boosting |
+| Visualization  | Matplotlib, Seaborn |
+| Environment    | Jupyter Notebook |
+| Optional Deployment | Streamlit |
 
-🤝 Contributing
+---
 
-Contributions and suggestions are always welcome.
-Open an issue or submit a pull request to improve this project.
+## 🧾 Business Relevance  
+This project simulates the critical business challenge of **predicting borrower default**—enabling lenders to proactively manage risk, reduce losses, and refine credit policies.  
+It demonstrates how **machine learning can translate into tangible business value** in finance.
 
-📬 Contact & Connect
+---
 
-Want to chat, suggest improvements, or collaborate?
+## 🔮 Future Enhancements  
+🔹 Integrate additional borrower-level features: employment history, alternate data sources.  
+🔹 Explore advanced techniques: XGBoost, LightGBM, neural networks with imbalanced loss functions.  
+🔹 Develop a web-based decision-support tool (Streamlit) for operational use by credit analysts.  
+🔹 Deploy the model via API and implement real-time monitoring and retraining pipelines.  
 
-GitHub: https://github.com/mohdbilal05
+---
 
-LinkedIn: (https://www.linkedin.com/in/bilal-mohd/)
-Email: mohdbilal3109@gmail.com
+## 👨‍💻 About the Author  
+**Mohd Bilal**  
+Data Science & Machine Learning Enthusiast | Building pragmatic ML solutions with business impact  
+📍 I’m passionate about bridging data science and decision-making in industries such as finance and healthcare.
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/bilal-mohd)  
+- 🌐 [GitHub](https://github.com/mohdbilal05)  
+- ✉️ Email: mohdbilal3109@gmail.com
+
+---
+
+### ⭐ If you find this project interesting, please star ⭐ the repository—it helps boost visibility and motivation to keep creating.
+
 
